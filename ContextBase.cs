@@ -12,12 +12,13 @@ namespace MyBucks.Core.DataProvider
 
         public ContextBase() : base()
         {
-
+            _stateTracker = new EfStateTracker();
         }
 
         public ContextBase(string connectionString) : base()
         {
             ConnectionString = connectionString;
+            _stateTracker = new EfStateTracker();
         }
         
         public string ConnectionString { get; set; }
