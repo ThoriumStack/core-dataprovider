@@ -23,7 +23,7 @@ namespace MyBucks.Core.DataProvider
         }
         
         public string ConnectionString { get; set; }
-        public int CurrentUserId { get; set; }
+        public string CurrentUserId { get; set; }
         public string CurrentContext { get; set; }
 
         public override int SaveChanges()
