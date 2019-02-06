@@ -9,7 +9,7 @@ namespace MyBucks.Core.DataProvider
 {
     public class ContextBase : DbContext
     {
-        private EfStateTracker _stateTracker;
+        protected EfStateTracker _stateTracker;
 
         public ContextBase() : base()
         {
@@ -70,13 +70,13 @@ namespace MyBucks.Core.DataProvider
             foreach (var entry in baseEntries.Where(x => x.State == EntityState.Modified))
             {
                 entry.Entity.ModifiedById = CurrentUserId;
-                entry.Entity.ModifiedDate = DateTime.Now;
+                entry.Entity.ModifiedDate = DateTime.UtcNow;
             }
             
             foreach (var entry in baseEntries.Where(x => x.State == EntityState.Added))
             {
                 entry.Entity.CreatedById = CurrentUserId;
-                entry.Entity.CreatedDate = DateTime.Now;
+                entry.Entity.CreatedDate = DateTime.UtcNow;
             }
         }
     }
