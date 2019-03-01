@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace MyBucks.Core.DataProvider.Model
+namespace Thorium.Core.DataProvider.Model
 {
     public class EntityChange
     {

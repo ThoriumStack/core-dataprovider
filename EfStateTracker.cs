@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
-using MyBucks.Core.DataProvider.Model;
+using Thorium.Core.DataProvider.Model;
 
-namespace MyBucks.Core.DataProvider
+namespace Thorium.Core.DataProvider
 {
     public class EfStateTracker
     {
@@ -17,17 +17,6 @@ namespace MyBucks.Core.DataProvider
                 HandleChange(entityChanges);
             }
         }
-
-        // todo: remove, no longer supported
-        //internal void TriggerStateTrackers(List<System.Data.Entity.Infrastructure.DbEntityEntry> changes)
-        //{
-        //    if (changes.Any())
-        //    {
-        //        var entityChanges = changes.Select(c => new EntityChange { Entity = c.Entity, State = MapEfStates(c.State), Fields = GetChangedFields(c) }).Distinct().ToList();
-        //        HandleChange(entityChanges);
-        //    }
-        //}
-
 
         private List<string> GetChangedFields(Microsoft.EntityFrameworkCore.ChangeTracking.EntityEntry change)
         {
@@ -52,35 +41,9 @@ namespace MyBucks.Core.DataProvider
             return result;
         }
 
-        // todo: remove, no longer supported
-
-        //private List<string> GetChangedFields(System.Data.Entity.Infrastructure.DbEntityEntry change)
-        //{
-
-
-        //    var result = new List<string>();
-
-        //    if (change.State != EntityState.Modified)
-        //    {
-        //        return result;
-        //    }
-
-
-        //    foreach (var prop in change.OriginalValues.PropertyNames)
-        //    {
-        //        var originalValue = change.OriginalValues[prop]?.ToString();
-        //        var currentValue = change.CurrentValues[prop]?.ToString();
-        //        if (originalValue != currentValue) //Only create a log if the value changes
-        //        {
-        //            result.Add(prop);
-        //        }
-        //    }
-        //    return result;
-        //}
 
         private EfEntityState MapEfStates(EntityState state)
         {
-            //(Modules.DataProvider.EfEntityState)c.State
 
             var stateMap = new Dictionary<EntityState, EfEntityState> {
                 [EntityState.Added] = EfEntityState.Added,

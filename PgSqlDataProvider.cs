@@ -1,10 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using Npgsql;
 
-namespace MyBucks.Core.DataProvider
+namespace Thorium.Core.DataProvider
 {
     public class PgSqlDataProvider : ContextBase
     {

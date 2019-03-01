@@ -1,10 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
-
-namespace MyBucks.Core.DataProvider
+namespace Thorium.Core.DataProvider
 {
     public class InMemoryProvider : ContextBase
     {

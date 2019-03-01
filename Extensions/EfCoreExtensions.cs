@@ -5,9 +5,8 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Reflection;
 using Microsoft.EntityFrameworkCore;
-using MyBucks.Core.DataProvider.Tools;
 
-namespace MyBucks.Core.DataProvider.Extensions
+namespace Thorium.Core.DataProvider.Extensions
 {
     public static class EfCoreExtensions
     {

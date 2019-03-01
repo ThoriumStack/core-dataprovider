@@ -1,9 +1,8 @@
-﻿using MyBucks.Core.DataProvider.Model;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Text;
+using Thorium.Core.DataProvider.Model;
 
-namespace MyBucks.Core.DataProvider
+namespace Thorium.Core.DataProvider
 {
     public interface IEntityStateTracker
     {

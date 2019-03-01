@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace MyBucks.Core.DataProvider.Model
+namespace Thorium.Core.DataProvider.Model
 {
     // Mirror of Entity framework core entity states to prevent dependency on entire EF core package
     // Summary:

@@ -1,11 +1,11 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System;
+﻿using System;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using MyBucks.Core.Model.DataModel;
+using Microsoft.EntityFrameworkCore;
+using Thorium.Core.Model.DataModel;
 
-namespace MyBucks.Core.DataProvider
+namespace Thorium.Core.DataProvider
 {
     public class ContextBase : DbContext
     {

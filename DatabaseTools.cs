@@ -6,7 +6,7 @@ using System.Linq;
 using System.Reflection;
 using Microsoft.SqlServer.Server;
 
-namespace MyBucks.Core.DataProvider.Tools
+namespace Thorium.Core.DataProvider
 {
     public class DatabaseTools
     {
